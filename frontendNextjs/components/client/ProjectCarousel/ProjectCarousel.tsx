@@ -31,7 +31,7 @@ const ProjectCarousel = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 3; // Number of items visible in the carousel at once
+  const visibleItems = 3; 
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - visibleItems < 0 ? 0 : prevIndex - visibleItems));
@@ -53,7 +53,7 @@ const ProjectCarousel = () => {
               src={project.imageUrl}
               alt={project.title}
               width={300} height={300}
-              className="rounded-lg "
+              className="rounded-lg mx-auto"
             />
             </div>
             <div className="mt-4 text-center">
@@ -69,14 +69,14 @@ const ProjectCarousel = () => {
 
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
+        className="absolute top-1/3 left-0 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
         disabled={currentIndex === 0}
       >
         <FaChevronLeft />
       </button>
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
+        className="absolute top-1/3 right-0 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
         disabled={currentIndex + visibleItems >= projects.length}
       >
         <FaChevronRight />

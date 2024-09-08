@@ -36,8 +36,13 @@ export const TopNavigation: React.FC<PortfolioNavigationProps> = ({ data, scroll
                     {data.map((item, index) => (
                         <li key={index}>
                             <button
-                                onClick={() => scrollTo(document.getElementById(String(item.id)), {  })}
-                                className={`text-slate-600 ${activeSection === index ? 'text-black font-semibold border-b-2 border-red-500' : ''}`}
+onClick={() => {
+    const targetElement = document.getElementById(String(item.id));
+    if (targetElement) {
+      const options = targetElement.id === 'profile' ? { offset: -60 } : {};
+      scrollTo(targetElement, options);
+    }
+  }}                                className={`text-slate-600 ${activeSection === index ? 'text-black font-semibold border-b-2 border-red-500' : ''}`}
                             >
                                 {item.text}
                             </button>

@@ -14,12 +14,11 @@ import StickyNavigation from '@/components/client/StickyNavigation/StickyNavigat
 
   
   return (
-    <div>
     <main>
       <div data-scroll>
       <div>
-      <section className='bg-white' id="profile">
-        <div className="flex items-center justify-between mt-[10%]">
+      <section className='bg-white pt-[10%]' id="profile">
+        <div className="flex items-center justify-between ">
           <div className='w-[55%]'>
             <h1 className='text-5xl font-bold mb-4'>From Web to Mobile:<br></br> Crafting Digital Delights</h1>
             <div>
@@ -79,10 +78,8 @@ import StickyNavigation from '@/components/client/StickyNavigation/StickyNavigat
     </div>
 
       </div>
-   
+      <StickyNavigation />
     </main>
-    <StickyNavigation />
-    </div>
 
   )
 }

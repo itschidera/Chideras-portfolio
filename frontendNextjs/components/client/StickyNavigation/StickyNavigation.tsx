@@ -18,7 +18,6 @@ const StickyNavigation = () => {
             if (entry.isIntersecting) {
               const index = sectionElements.indexOf(entry.target);
               setCurrentSection(index);
-              console.log(index, 'index')
             }
           });
         },
