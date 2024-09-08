@@ -1,0 +1,36 @@
+{
+  "name": "chideras-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/imagesloaded": "^4.1.6",
+    "dat": "^14.0.3",
+    "dat.gui": "^0.7.9",
+    "glslify-loader": "^2.0.0",
+    "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
+    "lenis": "^1.0.45",
+    "locomotive-scroll": "^4.1.4",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-locomotive-scroll": "^0.2.2",
+    "react-responsive-carousel": "^3.2.23",
+    "three": "^0.164.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
