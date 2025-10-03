@@ -1,0 +1,21 @@
+{
+  "name": "Chidera's Portfolio",
+  "short_name": "Chidera",
+  "description": "Portfolio of Chidera Nwankwo - Mobile and Web Developer",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
