@@ -1,14 +1,24 @@
+'use client'
+
 import React, { useEffect, useState } from 'react';
 
-const sections = ['profile', 'about', 'projects', 'contact'];
+const sections = [
+  { id: '1', name: 'Profile' },
+  { id: '2', name: 'About' },
+  { id: '3', name: 'Projects' },
+  { id: '4', name: 'Contact' }
+];
 
 const StickyNavigation = () => {
   const [currentSection, setCurrentSection] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+    
     const handleScroll = () => {
       const sectionElements = sections.map((section) =>
-        document.getElementById(section.toLowerCase())
+        document.getElementById(section.id)
       );
 
       console.log(sectionElements, 'section elements')
@@ -16,7 +26,7 @@ const StickyNavigation = () => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              const index = sectionElements.indexOf(entry.target);
+              const index = sectionElements.indexOf(entry.target as HTMLElement);
               setCurrentSection(index);
             }
           });
@@ -33,7 +43,7 @@ const StickyNavigation = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-4 py-4 bg-white shadow-md">
+    <div className="hidden md:flex fixed bottom-0 left-0 right-0 items-center justify-between px-4 py-4 bg-white shadow-md">
       {currentSection === 0 && (
         <div className="absolute left-4 flex items-center bottom-4">
           <span className="text-xs font-semibold transform -rotate-90 whitespace-nowrap">SCROLL DOWN</span>
@@ -41,9 +51,9 @@ const StickyNavigation = () => {
         </div>
       )}
       <div className="w-full flex justify-center">
-        {currentSection < sections.length - 1 && (
+        {isClient && currentSection < sections.length - 1 && (
           <div className="text-center">
-            <p className=" text-xs font-semibold uppercase">{sections[currentSection + 1]}</p>
+            <p className=" text-xs font-semibold uppercase">{sections[currentSection + 1].name}</p>
           </div>
         )}
       </div>
