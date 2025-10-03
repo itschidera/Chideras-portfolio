@@ -11,7 +11,7 @@ const HomePage = () => {
     <main>
       <div data-scroll>
         <div>
-          <section className='bg-white pt-[10%] px-4 sm:px-6 md:px-8 lg:px-0' id="1">
+          <section className='bg-white h-screen pt-16 sm:pt-20 md:pt-24 lg:pt-32 px-4 sm:px-6 md:px-8 lg:px-0' id="1">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
               <div className='w-full lg:w-[55%] text-center lg:text-left'>
                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4'>From Web to Mobile:<br></br> Crafting Digital Delights</h1>
@@ -28,7 +28,7 @@ const HomePage = () => {
             </div>
           </section>
           
-          <section id="2" className="min-h-screen flex flex-col justify-center p-4 sm:p-6 md:p-8 lg:p-10 bg-white">
+          <section id="2" className="min-h-screen flex flex-col justify-center p-4 sm:p-6 md:p-8 lg:p-10 bg-white -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4">
               I'm a Toronto-based software developer with a passion for crafting user-centric mobile and web applications. 
