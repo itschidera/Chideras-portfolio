@@ -1,7 +1,7 @@
 'use client'
 
-import { Navigation, TopNavigation } from "@/components/client";
-import { portfolioRoutes, topNavlinks } from "@/data";
+import { TopNavigation } from "@/components/client";
+import { topNavlinks } from "@/data";
 import { ReactNode, useRef } from "react";
 import { ReactLenis, useLenis } from 'lenis/react';
 import SocialLinks from '@/components/client/SocialLinks/SocialLinks';
@@ -13,7 +13,7 @@ interface LenisRef {
     };
 }
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const ClientWrapper = ({ children }: { children: ReactNode }) => {
     const lenisRef = useRef<LenisRef>({});
     const lenis = useLenis();
 
@@ -23,9 +23,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
     return (
         <ReactLenis root>
-            <div className="flex flex-col min-h-screen pt-[60px]">
+            <div className="flex flex-col min-h-screen pt-[50px] sm:pt-[55px] md:pt-[60px] lg:pt-[65px]">
                 <TopNavigation data={topNavlinks} scrollTo={scrollTo} />
-                <div className="max-w-6xl mx-auto ">{children}</div>
+                <div className="max-w-6xl mx-auto w-full">{children}</div>
                 <SocialLinks />
                 <SectionNavigator />
             </div>
@@ -33,4 +33,4 @@ const Layout = ({ children }: { children: ReactNode }) => {
     )
 }
 
-export default Layout;
+export default ClientWrapper;

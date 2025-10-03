@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const SocialLinks = () => {
   return (
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+    <div className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 flex-col space-y-4">
       <a href="https://github.com" target="_blank" rel="noopener noreferrer">
         <FaGithub className="text-xl hover:text-gray-700 transition-colors" />
       </a>
